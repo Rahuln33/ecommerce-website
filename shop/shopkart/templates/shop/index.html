@@ -13,11 +13,11 @@
                 <hr style="border-color: black;">
                 <nav aria-label="breadcrumb">
         </div>
-    {% for item in Products %}
+      {% for item in Products %}
         <div class="col-md-4 col-lg-3">
             <div class="card my-3">
                 {% if item.product_image %}
-                    <img src="{{ item.product_image.url }}" class="card-image-top" alt="Categories">
+                    <img src="{{ item.product_image.url }}" class="card-image-top" alt="Categories" style="width: 100%; height: 200px; object-fit: cover;">
                 {% else %}
                     <p>No image available</p>
                 {% endif %}
@@ -32,8 +32,7 @@
                 </a>    
             </div>
         </div>
-    {% endfor %}
-        
+      {% endfor %}  
     </div>
 </div>
 {% endblock content %}
