@@ -9,6 +9,9 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
+import pymysql
+pymysql.install_as_MySQLdb()
+
 
 from pathlib import Path
 
@@ -79,13 +82,14 @@ WSGI_APPLICATION = 'shop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'viratkohli',   # Replace with your database name
+        'NAME': 'e_commerse',   # Replace with your database name
         'USER': 'root',         # Replace with your database user
         'PASSWORD': 'rahul@333', # Replace with your database password
         'HOST': 'localhost',
         'PORT': '3306',
     }
 }
+
 
 
 # Password validation
